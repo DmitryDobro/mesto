@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="rus">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Mesto</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="popap">
+        <div class="popap__content">
+          <div class="popap__close">
+            <img src="./img/Close Icon.svg" alt="">
+          </div>
+          <form class="popap__form">
+            <h2 class="popap__title">Редактировать профиль</h2>
+            <fieldset class="popap__input-conteiner">
+              <label for="inputName"></label>
+              <input type="text" class="popap__input input" id="inputName" autocomplete="off"/>
+
+              <label for="inputName"></label>
+              <input type="text" class="popap__input input" id="inputJob" autocomplete="off"/>
+            </fieldset>
+            <button class="popap__btn btn">Сохранить</button>
+          </form>
+        </div>
+      </section>
+      <header class="header conteiner__main">
+        <img src="./img/Vector.svg" alt="Логотип сайта" />
+      </header>
+      <main class="main">
+        <section class="profile conteiner__main">
+          <img src="./img/avatar.jpg" alt="" class="profile__avatar" />
+          <div class="profile__info">
+            <p class="profile__name">Жак-Ив Кусто</p>
+            <button class="profile__btn profile__btn_edit btn">
+              <img src="./img/edit.svg" alt="" />
+            </button>
+            <p class="profile__job">Исследователь океана</p>
+          </div>
+          <button class="profile__btn profile__btn_add btn">
+            <img src="./img/add.svg" alt="" />
+          </button>
+        </section>
+        <section class="cards conteiner__main">
+          <div class="cards__card">
+            <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Карачаевск</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+          <div class="cards__card">
+            <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Гора Эльбрус</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+          <div class="cards__card">
+            <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Домбай</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+          <div class="cards__card">
+            <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Гора Эльбрус</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+          <div class="cards__card">
+            <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Домбай</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+          <div class="cards__card">
+            <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
+            <div class="cards__subscribe">
+              <p class="cards__places-name">Карачаево-Черкессия</p>
+              <img src="./img/likes.svg" alt="" class="cards__likes" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer conteiner__main">
+        <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

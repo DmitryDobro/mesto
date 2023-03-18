@@ -1,0 +1,6 @@
+.cards__subscribe {
+  padding: 0 21px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}

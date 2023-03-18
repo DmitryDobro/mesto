@@ -1,0 +1,8 @@
+.input {
+    background-color: none;
+    border: none;
+  }
+  .input:focus,
+  :active {
+    outline: none;
+  }

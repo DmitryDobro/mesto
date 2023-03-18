@@ -1,0 +1,8 @@
+.profile__contacts {
+  margin: 0 18px 0 0;
+}
+@media (max-width: 768px) {
+  .profile__contacts {
+    margin: 0 10px 0 0;
+  }
+}

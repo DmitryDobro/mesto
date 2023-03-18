@@ -1,0 +1,11 @@
+.popap__close {
+    position: absolute;
+    top: -30px;
+    right: -25px;
+    cursor: pointer;
+  }
+  @media (max-width: 684px){
+    .popap__close{
+        right: 0;
+    }
+}
