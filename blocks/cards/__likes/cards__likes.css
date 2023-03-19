@@ -1,16 +1,4 @@
 .cards__likes{
-  width: 22px;
-  height: 19px;
-  background-image: url(../../../img/likes.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
-.cards__likes:hover{
-  opacity: 0.5;
-} 
-
-/* .cards__likes{
     fill: none;
     stroke: black;
     stroke-width: 1.5;
@@ -19,4 +7,4 @@
   }
   .cards__likes:hover{
     stroke-opacity: 0.5;
-  } */
+  }
