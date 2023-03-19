@@ -1,0 +1,10 @@
+.cards__likes{
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+    display: block;
+    cursor: pointer;
+  }
+  .cards__likes:hover{
+    stroke-opacity: 0.5;
+  }

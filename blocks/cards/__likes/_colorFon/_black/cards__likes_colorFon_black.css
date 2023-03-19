@@ -1,0 +1,6 @@
+.cards__likes_colorFon_black{
+    fill: black;
+  }
+  .cards__likes_colorFon_black:hover{
+    stroke-opacity: 1;
+  }

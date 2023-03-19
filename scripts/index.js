@@ -25,3 +25,13 @@ function handleFormSubmit(evt) {
 }
 
 formElement.addEventListener('submit', handleFormSubmit);
+
+
+let heartsLinks = document.querySelectorAll('.cards__likes');
+let cardsBlock = document.querySelector('.cards');
+
+cardsBlock.addEventListener('click', ()=>{
+  if(event.target.closest('.cards__likes')){
+    event.target.closest('.cards__likes').classList.toggle('cards__likes_colorFon_black')
+  }
+})

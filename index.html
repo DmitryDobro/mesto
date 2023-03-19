@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="rus">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,26 +12,26 @@
       <section class="popap">
         <div class="popap__content">
           <div class="popap__close">
-            <img src="./img/Close Icon.svg" alt="">
+            <img src="./img/CloseIcon.svg" alt="Иконка крестик" />
           </div>
           <form class="popap__form">
             <h2 class="popap__title">Редактировать профиль</h2>
             <fieldset class="popap__input-conteiner">
               <label for="inputName"></label>
-              <input type="text" class="popap__input input" id="inputName" autocomplete="off"/>
+              <input type="text" class="popap__input input" id="inputName" autocomplete="off" />
 
               <label for="inputName"></label>
-              <input type="text" class="popap__input input" id="inputJob" autocomplete="off"/>
+              <input type="text" class="popap__input input" id="inputJob" autocomplete="off" />
             </fieldset>
             <button class="popap__btn btn">Сохранить</button>
           </form>
         </div>
       </section>
-      <header class="header conteiner__main">
+      <header class="header">
         <img src="./img/Vector.svg" alt="Логотип сайта" />
       </header>
-      <main class="main">
-        <section class="profile conteiner__main">
+      <main class="main wrapper__conteiner">
+        <section class="profile ">
           <img src="./img/avatar.jpg" alt="" class="profile__avatar" />
           <div class="profile__info">
             <p class="profile__name">Жак-Ив Кусто</p>
@@ -44,56 +44,86 @@
             <img src="./img/add.svg" alt="" />
           </button>
         </section>
-        <section class="cards conteiner__main">
+        <section class="cards">
           <div class="cards__card">
             <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Карачаевск</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
           <div class="cards__card">
             <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Гора Эльбрус</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
           <div class="cards__card">
             <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Домбай</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
           <div class="cards__card">
             <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Гора Эльбрус</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
           <div class="cards__card">
             <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Домбай</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
           <div class="cards__card">
             <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
             <div class="cards__subscribe">
               <p class="cards__places-name">Карачаево-Черкессия</p>
-              <img src="./img/likes.svg" alt="" class="cards__likes" />
+              <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
+              </svg>
             </div>
           </div>
         </section>
       </main>
-      <footer class="footer conteiner__main">
+      <footer class="footer">
         <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
       </footer>
     </div>
 
-    <script src="./script.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px 12px;
-  padding-top: 45px;
+  padding-top: 47px;
 }
 @media (max-width: 768px) {
   .cards {
@@ -15,5 +15,8 @@
     padding-top: 36px;
   }
 }
-.cards__likes {
-}
+
+
+
+
+

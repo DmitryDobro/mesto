@@ -1,6 +1,7 @@
 @import url('../vendor/normalize.css');
 @import url('../vendor/fonts/fonts.css');
 @import url('../blocks/wrapper/wrapper.css');
+@import url('../blocks/wrapper/__conteiner/wrapper__conteiner.css');
 @import url('../blocks/conteiner/__main/container__main.css');
 @import url('../blocks/btn/btn.css');
 @import url('../blocks/input/input.css');
@@ -32,6 +33,8 @@
 @import url('../blocks/cards/__subscribe/cards__subscribe.css');
 @import url('../blocks/cards/__places-name/cards__places-name.css');
 @import url('../blocks/cards/__photo-places/cards__photo-places.css');
+@import url('../blocks/cards/__likes/cards__likes.css');
+@import url('../blocks/cards/__likes/_colorFon/_black/cards__likes_colorFon_black.css');
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
