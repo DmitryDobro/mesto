@@ -16,7 +16,7 @@
   .profile__btn_type_edit {
     width: 18px;
     height: 18px;
-    margin: 10px 0 0 3px;
+    margin: 8px 0 0;
     background: url(../../../../img/EditMobile.svg) no-repeat center;
   }
 }
