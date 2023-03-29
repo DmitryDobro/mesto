@@ -3,6 +3,6 @@
     border: none;
   }
   .input:focus,
-  :active {
+  .input:active {
     outline: none;
   }

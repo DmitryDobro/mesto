@@ -1,6 +1,6 @@
-.cards__like_color-fon_black{
+.cards__like_active_true{
     background-image: url(../../../../img/likeBlack.svg);
   }
-  .cards__like_color-fon_black:hover{
+  .cards__like_active_true:hover{
     opacity: 1;
   }

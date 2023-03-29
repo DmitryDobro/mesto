@@ -15,6 +15,6 @@
   .popup__close {
     right: -10px;
     top: -37px;
-    background: url(../../../img/CloseIconMobile.svg) no-repeat;
+    background-size: 20px;
   }
 }

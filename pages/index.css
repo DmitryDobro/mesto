@@ -16,7 +16,7 @@
 
 
 @import url('../blocks/header/header.css');
-@import url('../blocks/header/_logo/header__logo.css');
+@import url('../blocks/header/__logo/header__logo.css');
 
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__avatar/profile__avatar.css');
@@ -33,7 +33,7 @@
 @import url('../blocks/cards/__places-name/cards__places-name.css');
 @import url('../blocks/cards/__photo-places/cards__photo-places.css');
 @import url('../blocks/cards/__like/cards__like.css');
-@import url('../blocks/cards/__like/_color/cards__like_color_black.css');
+@import url('../blocks/cards/__like/_active/cards__like_active_true.css');
 
 
 @import url('../blocks/footer/footer.css');
