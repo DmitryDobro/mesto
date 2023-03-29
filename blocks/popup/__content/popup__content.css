@@ -8,7 +8,7 @@
 }
 @media (max-width: 320px) {
   .popup__content {
-    transform: translateY(5px);
+    transform: translateY(0px);
     padding: 0;
   }
 }
