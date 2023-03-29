@@ -1,0 +1,6 @@
+.cards__like_color-fon_black{
+    background-image: url(../../../../img/likeBlack.svg);
+  }
+  .cards__like_color-fon_black:hover{
+    opacity: 1;
+  }

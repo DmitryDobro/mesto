@@ -1,7 +1,9 @@
 .cards {
+  max-width: 880px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 16px;
   padding-top: 47px;
 }
 
@@ -13,7 +15,7 @@
 @media (max-width: 500px) {
   .cards {
     grid-template-columns: 1fr;
-    padding-top: 36px;
+    padding: 36px 19px 0;
   }
 }
 

@@ -1,16 +1,15 @@
 .profile__info {
   display: grid;
-  grid-template-columns: fit-content(300px) min-content;
-  grid-template-rows: repeat(2, min-content);
-  gap: 16px 18px;
+  grid-template-columns: 1fr min-content;
+  gap: 9px 18px;
 }
 @media (max-width: 768px) {
   .profile__info {
-    margin: 0 0 36px;
-    padding-left: 22px;
+    padding-top: 18px;
+    margin: 0 0 31px;
+    padding-left: 24px;
     grid-template-columns: 1fr min-content;
-    gap: 14px 10px;
+    gap: 10px;
     text-align: center;
   }
-
 }

@@ -7,99 +7,79 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <title>Mesto</title>
   </head>
-  <body>
-    <div class="wrapper">
-      <section class="popap">
-        <div class="popap__content">
-          <div class="popap__close">
-            <img src="./img/CloseIcon.svg" alt="Иконка крестик" />
+  <body class="wrapper">
+    <header class="header">
+      <img class="header__logo" src="./img/Vector.svg" alt="Логотип сайта" />
+    </header>
+    <main class="main">
+      <section class="profile">
+        <img src="./img/avatar.jpg" alt="Фото человека" class="profile__avatar" />
+        <div class="profile__info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__btn profile__btn_type_edit btn" type="button"></button>
+          <p class="profile__job">Исследователь океана</p>
+        </div>
+        <button class="profile__btn profile__btn_type_add btn" type="button"></button>
+      </section>
+      <section class="cards">
+        <div class="cards__card">
+          <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Карачаевск</h2>
+            <button type="button" class="cards__like btn"></button>
           </div>
-          <form class="popap__form">
-            <h2 class="popap__title">Редактировать профиль</h2>
-            <fieldset class="popap__input-conteiner">
-              <label for="inputName"></label>
-              <input type="text" class="popap__input input" id="inputName" autocomplete="off" />
-
-              <label for="inputName"></label>
-              <input type="text" class="popap__input input" id="inputJob" autocomplete="off" />
-            </fieldset>
-            <button class="popap__btn btn">Сохранить</button>
-          </form>
+        </div>
+        <div class="cards__card">
+          <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Гора Эльбрус</h2>
+            <button type="button" class="cards__like btn"></button>
+          </div>
+        </div>
+        <div class="cards__card">
+          <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Домбай</h2>
+            <button type="button" class="cards__like btn"></button>
+          </div>
+        </div>
+        <div class="cards__card">
+          <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Гора Эльбрус</h2>
+            <button type="button" class="cards__like btn"></button>
+          </div>
+        </div>
+        <div class="cards__card">
+          <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Домбай</h2>
+            <button type="button" class="cards__like btn"></button>
+          </div>
+        </div>
+        <div class="cards__card">
+          <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
+          <div class="cards__subscribe">
+            <h2 class="cards__places-name">Карачаево-Черкессия</h2>
+            <button type="button" class="cards__like btn"></button>
+          </div>
         </div>
       </section>
-      <header class="header">
-        <img src="./img/Vector.svg" alt="Логотип сайта" />
-      </header>
-      <main class="main wrapper__conteiner">
-        <section class="profile">
-          <img src="./img/avatar.jpg" alt="" class="profile__avatar" />
-          <div class="profile__info">
-            <p class="profile__name">Жак-Ив Кусто</p>
-            <button class="profile__btn profile__btn_edit btn">
-              <img src="./img/edit.svg" alt="" />
-            </button>
-            <p class="profile__job">Исследователь океана</p>
-          </div>
-          <button class="profile__btn profile__btn_add btn">
-            <img src="./img/add.svg" alt="" />
-          </button>
-        </section>
-        <section class="cards">
-          <div class="cards__card">
-            <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Карачаевск</p>
-              <div class="cards__likes"></div>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Гора Эльбрус</p>
-              <div class="cards__likes"></div>
-              <!-- <svg class="cards__likes" width="22" height="19" viewBox="1 -1 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M20.2991 1.68186C22.567 3.90213 22.567 7.54338 20.2991 9.78586L10.9804 19L1.6841 9.80806C0.606277 8.72013 0 7.27695 0 5.74496C0 4.21297 0.583823 2.76979 1.6841 1.68186C3.92957 -0.560619 7.61215 -0.560619 9.88007 1.70406L10.9804 2.792L12.0806 1.68186C14.3486 -0.560619 18.0311 -0.560619 20.2991 1.68186Z" />
-              </svg> -->
-            </div>
-          </div>
-          <div class="cards__card">
-            <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Домбай</p>
-              <div class="cards__likes"></div>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Гора Эльбрус</p>
-              <div class="cards__likes"></div>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Домбай</p>
-              <div class="cards__likes"></div>
-            </div>
-          </div>
-          <div class="cards__card">
-            <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
-            <div class="cards__subscribe">
-              <p class="cards__places-name">Карачаево-Черкессия</p>
-              <div class="cards__likes"></div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
-      </footer>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__content">
+        <button class="popup__close btn"></button>
+        <form class="popup__form popup__input-conteiner" name="editForm">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <input type="text" class="popup__input input" id="inputName" autocomplete="off" name="fullName" />
+          <input type="text" class="popup__input input" id="inputJob" autocomplete="off" name="job" />
+          <button class="popup__btn btn">Сохранить</button>
+        </form>
+      </div>
     </div>
-
     <script src="./scripts/index.js"></script>
   </body>
 </html>
