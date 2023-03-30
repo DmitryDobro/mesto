@@ -36,7 +36,7 @@ formElement.addEventListener('submit', handleFormSubmit);
 
 cardsBlock.addEventListener('click', () => {
   if (event.target.closest('.cards__like')) {
-    event.target.closest('.cards__like').classList.toggle('cards__like_active_true');
+    event.target.closest('.cards__like').classList.toggle('cards__like_active');
   }
 });
 

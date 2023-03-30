@@ -2,8 +2,8 @@
   width: 32px;
   height: 32px;
   position: absolute;
-  top: -36px;
-  right: -41px;
+  top: -40px;
+  right: -40px;
   cursor: pointer;
   background: url(../../../img/CloseIcon.svg) no-repeat;
 }

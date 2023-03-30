@@ -6,6 +6,7 @@
   background: url(../../../../img/EditButton.svg) no-repeat center;
   align-self: center;
   border-radius: 0;
+  border: none;
 }
 @media (max-width: 768px) {
   .profile__btn_type_edit {
