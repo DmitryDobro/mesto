@@ -22,54 +22,12 @@
         <button class="profile__btn profile__btn_type_add btn" type="button"></button>
       </section>
       <section class="cards">
-        <div class="cards__card">
-          <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Карачаевск</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
-        <div class="cards__card">
-          <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Гора Эльбрус</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
-        <div class="cards__card">
-          <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Домбай</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
-        <div class="cards__card">
-          <img src="./img/elbrys.jpg" alt="Фото Эльбруса" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Гора Эльбрус</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
-        <div class="cards__card">
-          <img src="./img/domay.jpg" alt="Фото Домбай" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Домбай</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
-        <div class="cards__card">
-          <img src="./img/karachaev.jpg" alt="Фото Карачаевска" class="cards__photo-places" />
-          <div class="cards__subscribe">
-            <h2 class="cards__places-name">Карачаево-Черкессия</h2>
-            <button type="button" class="cards__like btn"></button>
-          </div>
-        </div>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&#169; 2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup__edit-block">
       <div class="popup__content">
         <button type="button" class="popup__close btn"></button>
         <form class="popup__form popup__input-conteiner" name="editForm">
@@ -80,6 +38,36 @@
         </form>
       </div>
     </div>
+    <div class="popup popup__add-block">
+      <div class="popup__content">
+        <button type="button" class="popup__close btn"></button>
+        <form class="popup__form popup__input-conteiner" name="editForm">
+          <h2 class="popup__title">Новое место</h2>
+          <input type="text" class="popup__input input" id="inputName" autocomplete="off" name="fullName" placeholder="Название" />
+          <input type="text" class="popup__input input" id="inputJob" autocomplete="off" name="job" placeholder="Ссылка на картинку" />
+          <button class="popup__btn btn">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup__img-block">
+      <div class="popup__content">
+        <button type="button" class="popup__close btn"></button>
+        <img class="popup_photo" src="" alt="" />
+        <p class="popup__subtitle"></p>
+      </div>
+    </div>
+
+    <template id="card-template">
+      <div class="cards__card">
+        <button type="button" class="cards__delete btn"></button>
+        <img src="" alt="" class="cards__photo-places" />
+        <div class="cards__subscribe">
+          <h2 class="cards__places-name"></h2>
+          <button type="button" class="cards__like btn"></button>
+        </div>
+      </div>
+    </template>
+    
     <script src="./scripts/index.js"></script>
   </body>
 </html>

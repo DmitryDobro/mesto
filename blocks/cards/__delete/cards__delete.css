@@ -1,0 +1,8 @@
+.cards__delete{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../../../img/Delete.svg) no-repeat;
+    right: 20px;
+    top: 20px;
+}
