@@ -6,3 +6,6 @@
     right: 20px;
     top: 20px;
 }
+.cards__delete:hover{
+    opacity: 0.6;
+  } 
