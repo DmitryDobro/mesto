@@ -59,8 +59,8 @@ btnAdd.addEventListener('click', () => {addClass(popupAdd, 'popup_active');});
 
 btnEdit.addEventListener('click', () => {
   addClass(popupEdit, 'popup_active');
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
+  popupEdit.querySelector('#inputName').value = profileName.textContent;
+  popupEdit.querySelector('#inputJob').value = profileJob.textContent;
 });
 // редактирование имени и работы
 function handleFormSubmit(evt) {
