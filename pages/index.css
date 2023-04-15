@@ -6,7 +6,7 @@
 @import url('../blocks/input/input.css');
 
 @import url('../blocks/popup/popup.css');
-@import url('../blocks/popup/__img-block/popup__img-block.css');
+@import url('../blocks/popup/_type/popup_type_img-block.css');
 @import url('../blocks/popup/_active/popup_active.css');
 @import url('../blocks/popup/__content/popup__content.css');
 @import url('../blocks/popup/__form/popup__form.css');

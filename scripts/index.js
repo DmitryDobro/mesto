@@ -1,17 +1,11 @@
-const popupAdd = document.querySelector('.popup__add-block');
-const popupEdit = document.querySelector('.popup__edit-block');
-const imgPopup = document.querySelector('.popup__img-block');
-
+const popupAdd = document.querySelector('.popup_type_add-block');
+const popupEdit = document.querySelector('.popup_type_edit-block');
+const imgPopup = document.querySelector('.popup_type_img-block');
 const btnEdit = document.querySelector('.profile__btn_type_edit');
 const btnAdd = document.querySelector('.profile__btn_type_add');
-
 const close = document.querySelector('.popup__close');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
-const nameInput = document.getElementById('inputName');
-const jobInput = document.getElementById('inputJob');
-const formElement = document.querySelector('.popup__form');
-
 const cardsBlock = document.querySelector('.cards');
 const formAdd = popupAdd.querySelector('.popup__form');
 const formEdit = popupEdit.querySelector('.popup__form');
@@ -71,8 +65,8 @@ btnEdit.addEventListener('click', () => {
 // редактирование имени и работы
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileJob.textContent = jobInput.value;
+  profileName.textContent = popupEdit.querySelector('#inputName').value;
+  profileJob.textContent = popupEdit.querySelector('#inputJob').value;
   removeClass(popupEdit, 'popup_active');
 }
 formEdit.addEventListener('submit', handleFormSubmit);
@@ -81,8 +75,8 @@ formEdit.addEventListener('submit', handleFormSubmit);
 function addCard(evt) {
   evt.preventDefault();
   let card = {};
-  card.name = popupAdd.querySelector('#inputName').value;
-  card.link = popupAdd.querySelector('#inputJob').value;
+  card.name = popupAdd.querySelector('#inputPlaceName').value;
+  card.link = popupAdd.querySelector('#inputLink').value;
   let newCard = createCard(card);
   cardsBlock.prepend(newCard);
   removeClass(popupAdd, 'popup_active');
@@ -98,7 +92,7 @@ function createCard(item) {
   const deleteIcon = card.querySelector('.cards__delete');
   // открытия попапа с картинкой
   cardPhoto.addEventListener('click', () => {
-    const photo = imgPopup.querySelector('.popup_photo');
+    const photo = imgPopup.querySelector('.popup__photo');
     const subtitle = imgPopup.querySelector('.popup__subtitle');
     photo.src = cardPhoto.src;
     photo.alt = cardName.textContent;
