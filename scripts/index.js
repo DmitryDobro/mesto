@@ -66,7 +66,7 @@ btnAdd.addEventListener('click', () => {
 });
 
 btnEdit.addEventListener('click', () => {
-  openPopup(popupEdit, 'popup_active');
+  openPopup(popupEdit);
   popupEdit.querySelector('#inputName').value = profileName.textContent;
   popupEdit.querySelector('#inputJob').value = profileJob.textContent;
 });
@@ -105,7 +105,7 @@ function createCard(item) {
     photo.src = cardPhoto.src;
     photo.alt = cardName.textContent;
     subtitle.textContent = cardName.textContent;
-    imgPopup.classList.add('popup_active');
+    openPopup(imgPopup);
   });
   // активация лайка
   likeIcon.addEventListener('click', () => {
