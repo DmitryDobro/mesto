@@ -74,9 +74,7 @@ btnAdd.addEventListener('click', () => {
 
 function closePopupFromEsc(evt){
   if(evt.key == 'Escape' ){
-    closePopup(popupAdd)
-    closePopup(popupEdit);
-    closePopup(imgPopup);
+    closePopup(document.querySelector('.popup_active'))
     document.removeEventListener('keydown', closePopupFromEsc);
   }
 }
