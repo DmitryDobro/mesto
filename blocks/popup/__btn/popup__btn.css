@@ -11,6 +11,7 @@
   line-height: 22px;
   margin: 16px 0 0 0;
 }
+
 .popup__btn:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }

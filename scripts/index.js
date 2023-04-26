@@ -57,16 +57,33 @@ function closePopup(element) {
 function openPopup(element) {
   element.classList.add('popup_active');
 }
+function closePopupFromOverlay(evt){
+  if(evt.target.classList.contains('popup')){
+    evt.target.classList.remove('popup_active')
+  }
+}
 addCloseButtonListener(popupAdd);
 addCloseButtonListener(popupEdit);
 addCloseButtonListener(imgPopup);
 
 btnAdd.addEventListener('click', () => {
   openPopup(popupAdd);
+  popupAdd.addEventListener('click', closePopupFromOverlay)  
+  document.addEventListener('keydown', closePopupFromEsc);
 });
 
+function closePopupFromEsc(evt){
+  if(evt.key == 'Escape' ){
+    closePopup(popupAdd)
+    closePopup(popupEdit);
+    closePopup(imgPopup);
+    document.removeEventListener('keydown', closePopupFromEsc);
+  }
+}
 btnEdit.addEventListener('click', () => {
   openPopup(popupEdit);
+  popupEdit.addEventListener('click', closePopupFromOverlay)  
+  document.addEventListener('keydown', closePopupFromEsc);
   popupEdit.querySelector('#inputName').value = profileName.textContent;
   popupEdit.querySelector('#inputJob').value = profileJob.textContent;
 });
@@ -78,6 +95,7 @@ function handleFormSubmit(evt) {
   closePopup(popupEdit);
 }
 formEdit.addEventListener('submit', handleFormSubmit);
+
 
 // добавление карточки из попапа
 function addCard(evt) {
@@ -106,6 +124,8 @@ function createCard(item) {
     photo.alt = cardName.textContent;
     subtitle.textContent = cardName.textContent;
     openPopup(imgPopup);
+    imgPopup.addEventListener('click', closePopupFromOverlay)  
+    document.addEventListener('keydown', closePopupFromEsc);
   });
   // активация лайка
   likeIcon.addEventListener('click', () => {
@@ -127,3 +147,5 @@ initialCards.forEach((element) => {
   const newCard = createCard(element);
   cardsBlock.append(newCard);
 });
+
+

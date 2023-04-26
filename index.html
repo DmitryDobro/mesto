@@ -29,11 +29,17 @@
     <div class="popup popup_type_edit-block">
       <div class="popup__content">
         <button type="button" class="popup__close btn"></button>
-        <form class="popup__form popup__input-conteiner" name="editForm">
+        <form class="popup__form popup__input-conteiner" name="editForm" novalidate>
           <h2 class="popup__title">Редактировать профиль</h2>
-          <input type="text" class="popup__input input" id="inputName" autocomplete="off" name="fullName" />
-          <input type="text" class="popup__input input" id="inputJob" autocomplete="off" name="job" />
-          <button class="popup__btn btn">Сохранить</button>
+          <label class="popup__field">
+            <input type="text" class="popup__input input" id="inputName" autocomplete="off" name="fullName" required minlength="2" maxlength="40"/>
+            <span class="form__input-error inputName-error"></span>
+          </label>
+          <label class="popup__field">
+            <input type="text" class="popup__input input" id="inputJob" autocomplete="off" name="job" required minlength="2" maxlength="200"/>
+            <span class="form__input-error inputJob-error"></span>
+          </label>
+          <button class="popup__btn btn" >Сохранить</button>
         </form>
       </div>
     </div>
@@ -42,8 +48,14 @@
         <button type="button" class="popup__close btn"></button>
         <form class="popup__form popup__input-conteiner" name="editForm">
           <h2 class="popup__title">Новое место</h2>
-          <input type="text" class="popup__input input" id="inputPlaceName" autocomplete="off" name="fullName" placeholder="Название" />
-          <input type="text" class="popup__input input" id="inputLink" autocomplete="off" name="job" placeholder="Ссылка на картинку" />
+          <label class="popup__field">
+            <input type="text" class="popup__input input" id="inputPlaceName" autocomplete="off" required required minlength="2" maxlength="30" name="placeName" placeholder="Название" />
+            <span class="form__input-error inputPlaceName-error"></span>
+          </label>
+          <label class="popup__field">
+            <input type="url" class="popup__input input" id="inputLink" autocomplete="off" required name="link" placeholder="Ссылка на картинку" />
+            <span class="form__input-error inputLink-error"></span>
+          </label>
           <button class="popup__btn btn">Сохранить</button>
         </form>
       </div>
@@ -67,6 +79,8 @@
       </div>
     </template>
 
+    
     <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate.js"></script>
   </body>
 </html>
