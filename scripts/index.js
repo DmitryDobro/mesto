@@ -4,8 +4,8 @@ const popupAdd = document.querySelector('.popup_type_add-block');
 const btnAdd = document.querySelector('.profile__btn_type_add');
 const formAdd = popupAdd.querySelector('.popup__form');
 const popupBtn = formAdd.querySelector('.popup__btn');
-let inputPlaceName = formAdd.querySelector('#inputPlaceName');
-let inputLink = formAdd.querySelector('#inputLink');
+const inputPlaceName = formAdd.querySelector('#inputPlaceName');
+const inputLink = formAdd.querySelector('#inputLink');
 // блок editPopup
 const popupEdit = document.querySelector('.popup_type_edit-block');
 const btnEdit = document.querySelector('.profile__btn_type_edit');
@@ -105,8 +105,8 @@ formEdit.addEventListener('submit', handleFormSubmit);
 function addCard(evt) {
   evt.preventDefault();
   const card = {};
-  card.name = popupAdd.querySelector('#inputPlaceName').value;
-  card.link = popupAdd.querySelector('#inputLink').value;
+  card.name = inputPlaceName.value;
+  card.link = inputLink.value;
   const newCard = createCard(card);
   cardsBlock.prepend(newCard);
   closePopup(popupAdd);
