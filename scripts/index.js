@@ -10,8 +10,8 @@ const inputLink = formAdd.querySelector('#inputLink');
 const popupEdit = document.querySelector('.popup_type_edit-block');
 const btnEdit = document.querySelector('.profile__btn_type_edit');
 const formEdit = popupEdit.querySelector('.popup__form');
-let inputName = popupEdit.querySelector('#inputName');
-let inputJob = popupEdit.querySelector('#inputJob');
+const inputName = popupEdit.querySelector('#inputName');
+const inputJob = popupEdit.querySelector('#inputJob');
 // блок imgPopup
 const imgPopup = document.querySelector('.popup_type_img-block');
 const photo = imgPopup.querySelector('.popup__photo');
