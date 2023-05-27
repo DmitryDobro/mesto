@@ -1,3 +1,5 @@
+import {Card} from './card.js'
+import {FormValidator, formConfig} from './validate.js'
 const popups = document.querySelectorAll('.popup');
 // блок addPopup
 const popupAdd = document.querySelector('.popup_type_add-block');
@@ -21,7 +23,7 @@ const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
 // блок cards
 const cardsBlock = document.querySelector('.cards');
-const cardTemplate = document.getElementById('card-template').content;
+
 
 const initialCards = [
   {
@@ -107,43 +109,26 @@ function addCard(evt) {
   const card = {};
   card.name = inputPlaceName.value;
   card.link = inputLink.value;
-  const newCard = createCard(card);
-  cardsBlock.prepend(newCard);
+  const newCard = new Card(card);
+  const cardElement = newCard.generateCard();
+  cardsBlock.prepend(cardElement);
   closePopup(popupAdd);
   formAdd.reset();
 }
 formAdd.addEventListener('submit', addCard);
 
-function createCard(item) {
-  const card = cardTemplate.querySelector('.cards__card').cloneNode(true);
-  const cardPhoto = card.querySelector('.cards__photo-places');
-  const cardName = card.querySelector('.cards__places-name');
-  const likeIcon = card.querySelector('.cards__like');
-  const deleteIcon = card.querySelector('.cards__delete');
-  // открытия попапа с картинкой
-  cardPhoto.addEventListener('click', () => {
-    photo.src = cardPhoto.src;
-    photo.alt = cardName.textContent;
-    subtitle.textContent = cardName.textContent;
-    openPopup(imgPopup);
-  });
-  // активация лайка
-  likeIcon.addEventListener('click', () => {
-    likeIcon.classList.toggle('cards__like_active');
-  });
-  // удаление карточки
-  deleteIcon.addEventListener('click', () => {
-    const cardeDelete = deleteIcon.closest('.cards__card');
-    cardeDelete.remove();
-  });
-
-  cardPhoto.src = item.link;
-  cardPhoto.alt = item.name;
-  cardName.textContent = item.name;
-  return card;
-}
-//получение карточек из массива
-initialCards.forEach((element) => {
-  const newCard = createCard(element);
-  cardsBlock.append(newCard);
+initialCards.forEach((item) => {
+  const card = new Card(item);
+  const cardElement = card.generateCard();
+  cardsBlock.append(cardElement);
 });
+
+const formAddValidate = new FormValidator(formAdd, formConfig); 
+const formEditValidate = new FormValidator(formEdit, formConfig); 
+formAddValidate._setEventListeners()
+formEditValidate._setEventListeners()
+
+
+
+
+
