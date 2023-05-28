@@ -1,6 +1,6 @@
 import { FormValidator } from './ForValidator.js';
-import formConfig from './config.js';
-import { Card } from './Card.js';
+import formConfig from './conf.js';
+import { Card } from './Car.js';
 const popups = document.querySelectorAll('.popup');
 // блок addPopup
 const popupAdd = document.querySelector('.popup_type_add-block');
