@@ -1,11 +1,11 @@
-import {Card} from './card.js'
-import {FormValidator, formConfig} from './validate.js'
+import { FormValidator } from './ForValidator.js';
+import formConfig from './Config.js';
+import { Card } from './Card.js';
 const popups = document.querySelectorAll('.popup');
 // блок addPopup
 const popupAdd = document.querySelector('.popup_type_add-block');
 const btnAdd = document.querySelector('.profile__btn_type_add');
 const formAdd = popupAdd.querySelector('.popup__form');
-const popupBtn = formAdd.querySelector('.popup__btn');
 const inputPlaceName = formAdd.querySelector('#inputPlaceName');
 const inputLink = formAdd.querySelector('#inputLink');
 // блок editPopup
@@ -14,16 +14,11 @@ const btnEdit = document.querySelector('.profile__btn_type_edit');
 const formEdit = popupEdit.querySelector('.popup__form');
 const inputName = popupEdit.querySelector('#inputName');
 const inputJob = popupEdit.querySelector('#inputJob');
-// блок imgPopup
-const imgPopup = document.querySelector('.popup_type_img-block');
-const photo = imgPopup.querySelector('.popup__photo');
-const subtitle = imgPopup.querySelector('.popup__subtitle');
 // блок profile
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__job');
 // блок cards
 const cardsBlock = document.querySelector('.cards');
-
 
 const initialCards = [
   {
@@ -77,8 +72,7 @@ popups.forEach((popup) => {
 btnAdd.addEventListener('click', () => {
   openPopup(popupAdd);
   if (inputPlaceName.value.length == 0 || inputLink.value.length == 0) {
-    popupBtn.disabled = true;
-    popupBtn.classList.add('popup__btn_type_disabled');
+    formAddValidate.addButtonStateDisabled();
   }
 });
 
@@ -91,6 +85,7 @@ function closePopupFromEsc(evt) {
 
 btnEdit.addEventListener('click', () => {
   openPopup(popupEdit);
+  formEditValidate.hideInputError();
   inputName.value = profileName.textContent;
   inputJob.value = profileJob.textContent;
 });
@@ -109,8 +104,9 @@ function addCard(evt) {
   const card = {};
   card.name = inputPlaceName.value;
   card.link = inputLink.value;
-  const newCard = new Card(card);
+  const newCard = new Card(card, 'card-template');
   const cardElement = newCard.generateCard();
+  newCard.setEventListenersOpenPopupPhoto(openPopup);
   cardsBlock.prepend(cardElement);
   closePopup(popupAdd);
   formAdd.reset();
@@ -118,17 +114,13 @@ function addCard(evt) {
 formAdd.addEventListener('submit', addCard);
 
 initialCards.forEach((item) => {
-  const card = new Card(item);
+  const card = new Card(item, 'card-template');
   const cardElement = card.generateCard();
+  card.setEventListenersOpenPopupPhoto(openPopup);
   cardsBlock.append(cardElement);
 });
 
-const formAddValidate = new FormValidator(formAdd, formConfig); 
-const formEditValidate = new FormValidator(formEdit, formConfig); 
-formAddValidate._setEventListeners()
-formEditValidate._setEventListeners()
-
-
-
-
-
+const formAddValidate = new FormValidator(formAdd, formConfig);
+const formEditValidate = new FormValidator(formEdit, formConfig);
+formAddValidate.enableValidation();
+formEditValidate.enableValidation();

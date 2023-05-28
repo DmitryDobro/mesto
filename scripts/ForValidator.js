@@ -1,18 +1,12 @@
-const formConfig = {
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__btn',
-  inactiveButtonClass: 'popup__btn_type_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible',
-};
-
 class FormValidator {
   constructor(formElement, config) {
     this._config = config;
     this._formElement = formElement;
     this._inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
     this._buttonElement = formElement.querySelector(config.submitButtonSelector);
+  }
+  enableValidation() {
+    this._setEventListeners();
   }
   _setEventListeners() {
     this._toggleButtonState();
@@ -40,25 +34,35 @@ class FormValidator {
     inputElement.classList.remove(this._config.inputErrorClass);
     inputErorr.textContent = ' ';
   }
-
+  hideInputError() {
+    this._inputList.forEach((inputElement) => {
+      this._hideInputError(inputElement);
+    });
+  }
+  addButtonStateDisabled() {
+    console.log('disabled');
+    this._buttonElement.classList.add(this._config.inactiveButtonClass);
+    this._buttonElement.disabled = true;
+  }
+  removeButtomStateDisabled() {
+    this._buttonElement.classList.remove(this._config.inactiveButtonClass);
+    this._buttonElement.disabled = false;
+  }
   _toggleButtonState() {
     if (this._hasInvalidInput(this._inputList)) {
-      this._buttonElement.classList.add(this._config.inactiveButtonClass);
-      this._buttonElement.disabled = true;
+      this.addButtonStateDisabled();
     } else {
-      this._buttonElement.classList.remove(this._config.inactiveButtonClass);
-      this._buttonElement.disabled = false;
+      this.removeButtomStateDisabled();
     }
   }
   _hasInvalidInput() {
     return this._inputList.some((inputElement) => {
-      console.log(!inputElement.validity.valid);
       return !inputElement.validity.valid;
     });
   }
 }
 
-export { FormValidator, formConfig };
+export { FormValidator };
 
 // function enableValidation(config) {
 //   const formList = Array.from(document.querySelectorAll(config.formSelector));
