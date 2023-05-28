@@ -1,5 +1,5 @@
 import { FormValidator } from './ForValidator.js';
-import formConfig from './Config.js';
+import formConfig from './config.js';
 import { Card } from './Card.js';
 const popups = document.querySelectorAll('.popup');
 // блок addPopup
@@ -98,26 +98,38 @@ function handleFormSubmit(evt) {
 }
 formEdit.addEventListener('submit', handleFormSubmit);
 
+// функция открытия попапа с картинкой
+function openPopupImage(link, name) {
+  const imgPopup = document.querySelector('.popup_type_img-block');
+  const photo = imgPopup.querySelector('.popup__photo');
+  const subtitle = imgPopup.querySelector('.popup__subtitle');
+  photo.src = link;
+  photo.alt = name;
+  subtitle.textContent = name;
+  openPopup(imgPopup);
+}
+
+// функция создание карточки
+function createCard(data, templateSelector, openPopupImage) {
+  const newCard = new Card(data, templateSelector, openPopupImage);
+  const cardElement = newCard.generateCard();
+  cardsBlock.prepend(cardElement);
+}
+
 // добавление карточки из попапа
 function addCard(evt) {
   evt.preventDefault();
   const card = {};
   card.name = inputPlaceName.value;
   card.link = inputLink.value;
-  const newCard = new Card(card, 'card-template');
-  const cardElement = newCard.generateCard();
-  newCard.setEventListenersOpenPopupPhoto(openPopup);
-  cardsBlock.prepend(cardElement);
+  createCard(card, 'card-template', openPopupImage);
   closePopup(popupAdd);
   formAdd.reset();
 }
 formAdd.addEventListener('submit', addCard);
 
 initialCards.forEach((item) => {
-  const card = new Card(item, 'card-template');
-  const cardElement = card.generateCard();
-  card.setEventListenersOpenPopupPhoto(openPopup);
-  cardsBlock.append(cardElement);
+  createCard(item, 'card-template', openPopupImage);
 });
 
 const formAddValidate = new FormValidator(formAdd, formConfig);
