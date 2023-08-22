@@ -152,6 +152,7 @@ class Popup {
   }
 }
 let popupEdinClass = new Popup('.popup_type_edit-block')
+alert('heel')
 btnEdit.addEventListener('click', () => {
   alert('heel')
   // openPopup(popupEdit);
