@@ -152,9 +152,9 @@ class Popup {
   }
 }
 let popupEdinClass = new Popup('.popup_type_edit-block')
-alert('heel')
+
 btnEdit.addEventListener('click', () => {
-  alert('heel')
+  popupEdinClass.openPopup()
   // openPopup(popupEdit);
   formEditValidate.hideInputError();
   inputName.value = profileName.textContent;
