@@ -83,12 +83,12 @@ function closePopupFromEsc(evt) {
   }
 }
 
-btnEdit.addEventListener('click', () => {
-  openPopup(popupEdit);
-  formEditValidate.hideInputError();
-  inputName.value = profileName.textContent;
-  inputJob.value = profileJob.textContent;
-});
+// btnEdit.addEventListener('click', () => {
+//   openPopup(popupEdit);
+//   formEditValidate.hideInputError();
+//   inputName.value = profileName.textContent;
+//   inputJob.value = profileJob.textContent;
+// });
 // редактирование имени и работы
 function handleFormSubmit(evt) {
   evt.preventDefault();
@@ -136,3 +136,44 @@ const formAddValidate = new FormValidator(formAdd, formConfig);
 const formEditValidate = new FormValidator(formEdit, formConfig);
 formAddValidate.enableValidation();
 formEditValidate.enableValidation();
+
+
+class Popup {
+  constructor(selector){
+    this.popup = document.querySelector(selector)
+  }
+  openPopup(){
+    this.popup.classList.add('popup_active');
+    document.addEventListener('keydown', this.closePopupFromEsc);
+  }
+  closePopup(){
+    this.popup.classList.remove('popup_active');
+    document.removeEventListener('keydown', closePopupFromEsc);
+  }
+}
+let popupEdinClass = new Popup('.popup_type_edit-block')
+btnEdit.addEventListener('click', () => {
+  // openPopup(popupEdit);
+  formEditValidate.hideInputError();
+  inputName.value = profileName.textContent;
+  inputJob.value = profileJob.textContent;
+});
+
+
+class Section {
+  constructor({items, renderer}, containerSelector){
+    this._renderedItems = items
+    this._renderer = renderer
+    this._container = document.querySelector(containerSelector)
+  }
+  addItem(element){
+    this._container.append(element)
+  }
+  renderItems(){
+    this._renderedItems.forEach(item => {
+      this._renderer(item)
+    })
+  }
+}
+
+
