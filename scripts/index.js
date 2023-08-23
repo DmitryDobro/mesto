@@ -173,7 +173,6 @@ class Section {
     this._container.append(element)
   }
   renderItems(){
-    alert( this._renderedItems)
     this._renderedItems.forEach(item => {
       this._renderer(item)
       alert(items)
@@ -188,4 +187,3 @@ renderer:(item)=>{
 }
 },'.cards') 
 test.renderItems()
-alert(123)
