@@ -183,4 +183,4 @@ let test = new Section({initialCards,
 renderer:(item)=>{
   createCard(item, 'card-template', openPopupImage);
 }
-}) 
+},'.cards') 
