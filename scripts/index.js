@@ -182,9 +182,6 @@ class Section {
 
 let test = new Section({initialCards, 
 renderer:(item)=>{
-  const newCard = new Card(item, templateSelector, openPopupImage);
-  const cardElement = newCard.generateCard();
-  test.addItem(cardElement)
   alert(item)
 }
 },'.cards') 
