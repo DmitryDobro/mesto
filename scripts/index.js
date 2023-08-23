@@ -184,3 +184,4 @@ renderer:(item)=>{
   createCard(item, 'card-template', openPopupImage);
 }
 },'.cards') 
+test._renderedItems()
