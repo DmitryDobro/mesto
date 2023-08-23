@@ -175,13 +175,15 @@ class Section {
   renderItems(){
     this._renderedItems.forEach(item => {
       this._renderer(item)
+      alert(items)
     })
   }
 }
 
 
-// let test = new Section({initialCards, 
-// renderer:(item)=>{
-//   alert(item)
-// }
-// },'.cards') 
+let test = new Section({initialCards, 
+renderer:(item)=>{
+  alert(item)
+}
+},'.cards') 
+test.renderItems()
