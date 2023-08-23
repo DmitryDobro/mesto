@@ -113,7 +113,8 @@ function openPopupImage(link, name) {
 function createCard(data, templateSelector, openPopupImage) {
   const newCard = new Card(data, templateSelector, openPopupImage);
   const cardElement = newCard.generateCard();
-  cardsBlock.prepend(cardElement);
+  return cardElement
+  // cardsBlock.prepend(cardElement);
 }
 
 // добавление карточки из попапа
@@ -181,7 +182,8 @@ class Section {
 
 let test = new Section({initialCards, 
 renderer:(item)=>{
-  createCard(item, 'card-template', openPopupImage);
+  let block = createCard(item, 'card-template', openPopupImage);
+  test.addItem(block)
 }
 },'.cards') 
 test.renderedItems()
