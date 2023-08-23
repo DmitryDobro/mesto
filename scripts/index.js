@@ -186,4 +186,4 @@ renderer:(item)=>{
   test.addItem(block)
 }
 },'.cards') 
-test.addItem()
+test.renderedItems()
