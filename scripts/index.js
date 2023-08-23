@@ -180,9 +180,8 @@ class Section {
 }
 
 
-let test = new Section({initialCards, 
-renderer:(item)=>{
-  alert(item)
-}
-},'.cards') 
-test.renderedItems()
+// let test = new Section({initialCards, 
+// renderer:(item)=>{
+//   alert(item)
+// }
+// },'.cards') 
