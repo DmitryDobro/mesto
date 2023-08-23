@@ -173,7 +173,7 @@ class Section {
     this._container.append(element)
   }
   renderItems(){
-    alert( this._renderer)
+    alert( this._renderedItemsg)
     this._renderedItems.forEach(item => {
       this._renderer(item)
       alert(items)
