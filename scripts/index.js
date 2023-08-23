@@ -128,9 +128,9 @@ function addCard(evt) {
 }
 formAdd.addEventListener('submit', addCard);
 
-initialCards.forEach((item) => {
-  createCard(item, 'card-template', openPopupImage);
-});
+// initialCards.forEach((item) => {
+//   createCard(item, 'card-template', openPopupImage);
+// });
 
 const formAddValidate = new FormValidator(formAdd, formConfig);
 const formEditValidate = new FormValidator(formEdit, formConfig);
@@ -179,3 +179,8 @@ class Section {
 }
 
 
+let test = new Section({initialCards, 
+renderer:(item)=>{
+  createCard(item, 'card-template', openPopupImage);
+}
+}) 
