@@ -1,0 +1,39 @@
+{
+  "name": "mesto",
+  "version": "1.0.0",
+  "description": "Проект закрепляет знание",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DmitryDobro/mesto.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DmitryDobro/mesto/issues"
+  },
+  "homepage": "https://github.com/DmitryDobro/mesto#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.10",
+    "autoprefixer": "^10.4.15",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "babel-loader": "^9.1.3",
+    "core-js": "^3.32.1",
+    "D": "^1.0.0"
+  }
+}

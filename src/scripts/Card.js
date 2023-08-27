@@ -1,9 +1,10 @@
 class Card {
-  constructor(data, templateSelector, openPopupImage) {
+  constructor(data, handleCardClick, templateSelector) {
+    this.data = data;
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
-    this.openPopupImage = openPopupImage;
+    this.handleCardClick = handleCardClick;
   }
   _getTemplate() {
     const cardElement = document.getElementById(this._templateSelector).content.querySelector('.cards__card').cloneNode(true);
@@ -15,7 +16,7 @@ class Card {
     const deleteIcon = this._element.querySelector('.cards__delete');
     const cardPhoto = this._element.querySelector('.cards__photo-places');
     cardPhoto.addEventListener('click', () => {
-      this.openPopupImage(this._link, this._name);
+      this.handleCardClick(this._link, this._name);
     });
     likeIcon.addEventListener('click', () => {
       this._likeActive(likeIcon);

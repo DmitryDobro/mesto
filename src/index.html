@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/index.css" />
+    <!-- <link rel="stylesheet" href="./pages/index.css" /> -->
     <title>Mesto</title>
   </head>
   <body class="wrapper">
     <header class="header">
-      <img class="header__logo" src="./img/Vector.svg" alt="Логотип сайта" />
+      <img class="header__logo" src="<%=require('./img/Vector.svg')%>" alt="Логотип сайта" />
     </header>
     <main class="main">
       <section class="profile">
-        <img src="./img/avatar.jpg" alt="Фото человека" class="profile__avatar" />
+        <img src="<%=require('./img/avatar.jpg') %> " alt="Фото человека" class="profile__avatar" />
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__btn profile__btn_type_edit btn" type="button"></button>
@@ -49,7 +49,7 @@
         <form class="popup__form popup__input-conteiner" name="editForm">
           <h2 class="popup__title">Новое место</h2>
           <label class="popup__field">
-            <input type="text" class="popup__input input" id="inputPlaceName" autocomplete="off" required minlength="2" maxlength="30" name="placeName" placeholder="Название" />
+            <input type="text" class="popup__input input" id="inputPlaceName" autocomplete="off" required minlength="2" maxlength="30" name="name" placeholder="Название" />
             <span class="popup__input-error inputPlaceName-error"></span>
           </label>
           <label class="popup__field">
@@ -80,7 +80,7 @@
     </template>
 
     
-    <script type="module" src="./scripts/index.js"></script>
+    <!-- <script type="module" src="./scripts/index.js"></script> -->
     <!-- <script type="module" src="./scripts/validate.js"></script> -->
   </body>
 </html>

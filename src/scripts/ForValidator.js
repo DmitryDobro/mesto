@@ -40,7 +40,6 @@ class FormValidator {
     });
   }
   addButtonStateDisabled() {
-    console.log('disabled');
     this._buttonElement.classList.add(this._config.inactiveButtonClass);
     this._buttonElement.disabled = true;
   }
