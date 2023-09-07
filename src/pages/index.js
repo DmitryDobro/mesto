@@ -15,7 +15,6 @@ Promise.all([api.getCards(), api.getUserInfo()]).then(([dataCards, dataUSer]) =>
   userInfo.setUserAvatar(dataUSer);
   section.renderItems(dataCards, dataUSer._id);
 });
-
 let section = new Section(
   {
     renderer: (item, userId) => {
