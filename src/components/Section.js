@@ -7,9 +7,9 @@ class Section {
   addItem(element) {
     this._container.prepend(element);
   }
-  renderItems() {
-    this._renderedItems.forEach((item) => {
-      this._renderer(item);
+  renderItems(data, userId) {
+    data.forEach((item) => {
+      this._renderer(item, userId);
     });
   }
 }

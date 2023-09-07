@@ -13,9 +13,10 @@ module.exports = {
   },
   mode: 'development',
   devServer: {
-    static: path.resolve(__dirname, './dist'), // путь, куда "смотрит" режим разработчика
+    client: {overlay: true},
+    // static:  'src',
+    static: path.resolve(__dirname, './src'), // путь, куда "смотрит" режим разработчика
     compress: true, // это ускорит загрузку в режиме разработки
-
     open: true, // сайт будет открываться сам при запуске npm run dev
   },
   module: {

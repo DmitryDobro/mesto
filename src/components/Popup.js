@@ -1,7 +1,7 @@
 class Popup {
   constructor(popup) {
     this.popup = document.querySelector(popup);
-    this._handleEscClose = this._handleEscClose.bind(this); 
+    this._handleEscClose = this._handleEscClose.bind(this);
   }
   openPopup() {
     this.popup.classList.add('popup_active');
@@ -29,3 +29,5 @@ class Popup {
 }
 
 export { Popup };
+
+
