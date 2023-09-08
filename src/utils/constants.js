@@ -24,7 +24,7 @@ const btnEdit = document.querySelector('.profile__btn_type_edit');
 const formEdit = popupEdit.querySelector('.popup__form');
 const inputName = popupEdit.querySelector('#inputName');
 const inputJob = popupEdit.querySelector('#inputJob');
-let profileAvatarBlock = document.querySelector('.profile__block-avatar');
+const profileAvatarBlock = document.querySelector('.profile__block-avatar');
 const popupEditAvatar = document.querySelector('.popup_type_avatar');
 const formAvatar = popupEditAvatar.querySelector('.popup__form');
 

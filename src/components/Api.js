@@ -10,6 +10,7 @@ class Api {
     }
     return Promise.reject(new Error('Ошибка!'));
   }
+
   addNewCard(data) {
     return fetch(`${this._url}/cards`, {
       method: 'POST',
@@ -20,11 +21,13 @@ class Api {
       }),
     }).then(this._getResonce);
   }
+
   getCards() {
     return fetch(`${this._url}/cards`, {
       headers: this._headers,
     }).then(this._getResonce);
   }
+
   deleteCard(cardId) {
     return fetch(`${this._url}/cards/${cardId}`, {
       method: 'DELETE',
@@ -38,6 +41,7 @@ class Api {
       headers: this._headers,
     }).then(this._getResonce);
   }
+
   deleteLike(cardId) {
     return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: 'DELETE',
@@ -50,6 +54,7 @@ class Api {
       headers: this._headers,
     }).then(this._getResonce);
   }
+
   setUserInfoApi(data) {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
@@ -60,6 +65,7 @@ class Api {
       }),
     }).then(this._getResonce);
   }
+  
   setUserAvatar(data) {
     return fetch(`${this._url}/users/me/avatar`, {
       method: 'PATCH',

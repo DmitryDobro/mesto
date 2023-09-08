@@ -25,7 +25,7 @@ class Card {
       this.handleCardClick(this._link, this._name);
     });
     this._buttonLike.addEventListener('click', () => {
-      this._togleLike();
+      this._handleLikeClick();
     });
     this._deleteIcon.addEventListener('click', () => {
       this.handleCardDelete(this._idCard);
@@ -33,28 +33,24 @@ class Card {
   }
 
   // проверка на наличие собственного лайка
-  _likedCard() {
+  _isLiked() {
     return this._dataLikes.find((like) => like._id === this._userId);
   }
 
   // поставить/убрать лайк в зависимости от его наличия
-  _togleLike() {
-    if (this._likedCard()) {
+  _handleLikeClick() {
+    if (this._isLiked()) {
       this.handleCardLikeDelete(this._idCard);
     } else {
       this.handleCardLike(this._idCard);
     }
   }
 
-  renderCardLike(card) {
+  updateLikes(card) {
     // устанавливаем массиву лайков актуальное значение
     this._dataLikes = card.likes;
-    if (this._dataLikes.length === 0) {
-      this._likesCount.textContent = '0';
-    } else {
-      this._likesCount.textContent = this._dataLikes.length;
-    }
-    if (this._likedCard()) {
+    this._likesCount.textContent = this._dataLikes.length;
+    if (this._isLiked()) {
       this._buttonLike.classList.add('cards__like_active');
     } else {
       this._buttonLike.classList.remove('cards__like_active');
@@ -70,7 +66,7 @@ class Card {
     this._cardImage.src = this._link;
     this._cardImage.alt = this._name;
     this._element.querySelector('.cards__places-name').textContent = this._name;
-    this.renderCardLike(this.data);
+    this.updateLikes(this.data);
     if (this._userId !== this.data.owner._id) {
       this._deleteIcon.remove();
     }
