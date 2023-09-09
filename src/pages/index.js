@@ -14,7 +14,6 @@ const api = new Api(configApi);
 Promise.all([api.getCards(), api.getUserInfo()])
   .then(([dataCards, dataUSer]) => {
     userId = dataUSer._id;
-    console.log(userId);
     userInfo.setUserInfo(dataUSer);
     userInfo.setUserAvatar(dataUSer);
     section.renderItems(dataCards);
@@ -25,7 +24,7 @@ const section = new Section(
   {
     renderer: (item) => {
       const cardElement = createCard(item, 'card-template');
-      section.addItem(cardElement);
+      section.appendItem(cardElement);
     },
   },
   '.cards'
@@ -151,7 +150,6 @@ btnEdit.addEventListener('click', () => {
 profileAvatarBlock.addEventListener('click', () => {
   popupEditAvatarPhoto.openPopup();
   formEditAvatarValidate.hideInputError();
-  const dataUser = userInfo.getUserInfo();
 });
 
 // делаем валидация

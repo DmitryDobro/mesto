@@ -4,7 +4,7 @@ class Section {
     this._renderer = renderer;
     this._container = document.querySelector(containerSelector);
   }
-  addItem(element) {
+  appendItem(element) {
     this._container.append(element);
   }
   prependItem(element) {
